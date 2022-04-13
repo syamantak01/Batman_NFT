@@ -41,6 +41,6 @@ Order of running scripts/commands
         - change the filepath to upload all the images
     - `brownie run scripts/set_tokenuri.py --network rinkeby`
 
-My NFTs:
+My NFTs
     - https://testnets.opensea.io/assets/0x9b3fBF9DA743801861998E7158054425FB99f878/0
     - https://testnets.opensea.io/assets/0x9b3fBF9DA743801861998E7158054425FB99f878/1
