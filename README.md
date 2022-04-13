@@ -42,5 +42,5 @@ Order of running scripts/commands
     - `brownie run scripts/set_tokenuri.py --network rinkeby`
 
 My NFTs
-    - https://testnets.opensea.io/assets/0x9b3fBF9DA743801861998E7158054425FB99f878/0
-    - https://testnets.opensea.io/assets/0x9b3fBF9DA743801861998E7158054425FB99f878/1
+- https://testnets.opensea.io/assets/0x9b3fBF9DA743801861998E7158054425FB99f878/0
+- https://testnets.opensea.io/assets/0x9b3fBF9DA743801861998E7158054425FB99f878/1
