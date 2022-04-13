@@ -26,20 +26,20 @@ PS: For full functionality of NFTs, we need on-chain attributes. And just use To
     This solves the centralized issue of diluting the value of NFTs by printing more "rare" ones, giving them actual value.
     - We are only gonna know what type of batman it is once the **random number** is generated. Create our own new setTokenURI() function that sets the tokenURI based on the type of the batman and update it based on the type of the batman
 
-Automate the testing:
-    - To see if the token has been created, we check if the tokenCounter has been increased to 1
-    - The bulk of the work actually comes from the fulfillRandomness() function and we have to tell our VRFCoordinator Mock to actually return and call this function.
-    - In integration testing, we dont need to manually call the callBackWithRandomness() function and since the chainlink node will respond, we dont need the requestId seperately. That means the type that we are going to get will actually be random. All we need to do is wait for the transaction to be called back.
+Automate the testing
+- To see if the token has been created, we check if the tokenCounter has been increased to 1
+- The bulk of the work actually comes from the fulfillRandomness() function and we have to tell our VRFCoordinator Mock to actually return and call this function.
+- In integration testing, we dont need to manually call the callBackWithRandomness() function and since the chainlink node will respond, we dont need the requestId seperately. That means the type that we are going to get will actually be random. All we need to do is wait for the transaction to be called back.
 
 Order of running scripts/commands
-    - `ipfs daemon` to make the ipfs node online
-    - `brownie run scripts/deploy_and_create.py --network rinkeby`
-    - `brownie run scripts/create_collectible.py --network rinkeby`
-        - wait for some time(~30 sec) for the VRFCoordinator to respond
-    - `brownie run scripts/create_metadata.py --network rinkeby`
+- `ipfs daemon` to make the ipfs node online
+- `brownie run scripts/deploy_and_create.py --network rinkeby`
+- `brownie run scripts/create_collectible.py --network rinkeby`
+    - wait for some time(~30 sec) for the VRFCoordinator to respond
+- `brownie run scripts/create_metadata.py --network rinkeby`
     - `brownie run scripts/upload_to_pinata.py`
-        - change the filepath to upload all the images
-    - `brownie run scripts/set_tokenuri.py --network rinkeby`
+- change the filepath to upload all the images
+- `brownie run scripts/set_tokenuri.py --network rinkeby`
 
 My NFTs
 - https://testnets.opensea.io/assets/0x9b3fBF9DA743801861998E7158054425FB99f878/0
